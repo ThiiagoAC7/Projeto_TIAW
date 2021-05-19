@@ -114,4 +114,12 @@ li a:hover{
     .card{
         margin: 0px;
     }
+    
+    .parallax {
+        display: none;
+    }
+    
+    .parallax-noticias {
+        display: none;
+    }
 }
