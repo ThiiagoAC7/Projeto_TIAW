@@ -25,6 +25,15 @@ body, html {
     background-size: cover;
 }
 
+.parallax-reciclagem {
+    background-image: url('img/reciclagem.jpg');
+    height: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 li a{
     color: #08611B;
     background-color: rgb(255, 255, 255, 0.0);
@@ -59,6 +68,10 @@ li a:hover{
 }
 
 .card-noticias{
+    padding: 40px;
+}
+
+.card-reciclagem{
     padding: 40px;
 }
 
