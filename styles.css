@@ -61,8 +61,13 @@ li a:hover{
 }
 
 #map{
-    height:600px;
+    height:750px;
     width:100%;
+}
+
+.botao-mapa{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .card-principal{
