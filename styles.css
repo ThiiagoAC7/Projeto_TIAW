@@ -6,7 +6,8 @@
 body, html {
     height: 100%;
 }
-  
+
+/*
 .parallax {
     background-image: url('img/inicio.svg');
     height: 50%;
@@ -24,14 +25,10 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+*/
 
-.parallax-reciclagem {
-    background-image: url('img/reciclagem.jpg');
-    height: 50%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+h3{
+    margin-top: 20px;
 }
 
 li a{
@@ -63,6 +60,11 @@ li a:hover{
     max-width: 100%;
 }
 
+#map{
+    height:600px;
+    width:100%;
+}
+
 .card-principal{
     margin: 20px;
 }
@@ -71,13 +73,13 @@ li a:hover{
     padding: 40px;
 }
 
-.card-reciclagem{
-    padding: 40px;
-}
-
 .bloco{
     text-align: center;
     justify-content: center;
+}
+
+.bloco p{
+    text-align: justify;
 }
 
 .botao{
@@ -98,7 +100,16 @@ li a:hover{
     max-width: 300px;
 }
 
-.footer{ 
+.empresas{
+    align-items: center;
+    justify-content: center;
+}
+
+.empresas h3{
+    text-align: center;
+}
+
+.footer{
     margin-top: 10px;
     background: #0EAD30;
     color: #08611B;
@@ -127,7 +138,7 @@ li a:hover{
     .card{
         margin: 0px;
     }
-    
+
     .parallax {
         display: none;
     }
