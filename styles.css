@@ -46,6 +46,10 @@ h3{
     background-color: #51d16d;
 }
 
+#btn_logout:hover, #btn_login:hover{
+    background-color: rgb(255, 255, 255, 0);
+}
+
 .header{
     background: white;
     color: white;
@@ -70,6 +74,11 @@ h3{
     width: 100%;
     height: 30%;
     object-fit: fill;
+}
+
+.titulo{
+    text-align: center;
+    color: #08611B;
 }
 
 #map{

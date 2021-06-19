@@ -1,7 +1,3 @@
-function login() {
-    window.location.href = LOGIN_URL;
-}
-
     function initPage() {
 
         if (usuarioCorrente.login) {
@@ -9,8 +5,6 @@ function login() {
             document.getElementById('btn_login').style.display = 'none';
             document.getElementById('btn_logout').style.display = 'flex';
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
-        } else {
-            document.getElementById('btn_login').addEventListener('click', login);
         }
     }
 

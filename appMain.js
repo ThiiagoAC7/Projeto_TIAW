@@ -10,7 +10,7 @@ function exibeNoticias () {
         let noticias = dados.articles[i];
 
         //Concatenar o código do Card com os dados do JSON
-        texto += `<div class="col-12 col-sm-6 col-lg-3 col-xl-3  d-flex align-items-stretch justify-content-center mb-4">
+        texto += `<div class="col-12 col-sm-6 col-lg-6 col-xl-3  d-flex align-items-stretch justify-content-center mb-4">
                     <div class="card card-principal shadow" style="width: 18rem;">
                         <img src="${noticias.urlToImage}" class="card-img-top" alt="">
                         <div class="card-body d-flex flex-column justify-content-between">
