@@ -6,12 +6,12 @@ function exibeNoticias () {
 
     //Montar texto HTML das noticias sobre reciclagem
     let dados = JSON.parse (this.responseText);
-    for (i=0; i < 3; i++) {
+    for (i=0; i < 4; i++) {
         let noticias = dados.articles[i];
 
         //Concatenar o código do Card com os dados do JSON
-        texto += `<div class="col-12 col-sm-4 col-lg-4 col-xl-3  d-flex align-items-stretch justify-content-center mb-4">
-                    <div class="card card-principal" style="width: 18rem;">
+        texto += `<div class="col-12 col-sm-6 col-lg-3 col-xl-3  d-flex align-items-stretch justify-content-center mb-4">
+                    <div class="card card-principal shadow" style="width: 18rem;">
                         <img src="${noticias.urlToImage}" class="card-img-top" alt="">
                         <div class="card-body d-flex flex-column justify-content-between">
                         <h5 class="card-title">${noticias.title}</h5>

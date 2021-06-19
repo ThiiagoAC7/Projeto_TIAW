@@ -31,33 +31,45 @@ h3{
     margin-top: 20px;
 }
 
-li a{
-    color: #08611B;
+.header_area a.active{
+    background-color: #0EAD30 !important;
+}
+
+.header_area a{
+    color: #0EAD30;
     background-color: rgb(255, 255, 255, 0.0);
     border-color: rgb(255, 255, 255, 0.0);
 }
 
-li a:hover{
-    color: rgba(255, 255, 255, 0.746);
-    background-color: rgb(255, 255, 255, 0.0);
-    border-color: rgb(255, 255, 255, 0.0);
+.header_area a:hover{
+    color: white;
+    background-color: #51d16d;
 }
 
 .header{
-    text-align: center;
-    background: #0EAD30;
+    background: white;
     color: white;
-    max-width: 100%;
+}
+
+.header_area{
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    max-width: 50px;
+}
+
+.icon{
+    max-width: 30px;
 }
 
 .imagem-inicio{
     width: 100%;
     height: 30%;
     object-fit: fill;
-}
-
-.main{
-    max-width: 100%;
 }
 
 #map{
@@ -72,6 +84,7 @@ li a:hover{
 
 .card-principal{
     margin: 20px;
+    border-color: rgba(255, 255, 255, 0);
 }
 
 .card-noticias{
@@ -97,8 +110,36 @@ li a:hover{
     border-color: white;
 }
 
-#reciclagem{
-    background-color: #0EAD30;
+#reciclagem .verde{
+    border-color: green;
+}
+
+#reciclagem .verde .botao{
+    background-color: green;
+}
+
+#reciclagem .amarelo{
+    border-color: rgb(175, 175, 0);
+}
+
+#reciclagem .amarelo .botao{
+    background-color: rgb(175, 175, 0);
+}
+
+#reciclagem .azul{
+    border-color: blue;
+}
+
+#reciclagem .azul .botao{
+    background-color: blue;
+}
+
+#reciclagem .vermelho{
+    border-color: red;
+}
+
+#reciclagem .vermelho .botao{
+    background-color: red;
 }
 
 .logo-empresa{
@@ -117,7 +158,7 @@ li a:hover{
 .footer{
     margin-top: 10px;
     background: #0EAD30;
-    color: #08611B;
+    color: white;
     max-width: 100%;
 }
 
@@ -126,10 +167,9 @@ li a:hover{
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {  
-    .nav.row{
-        padding:0px;
-        margin:0px;
+@media screen and (max-width: 768px) {
+    .header{
+        max-width: 100%;
     }
 
     .logo-empresa{
