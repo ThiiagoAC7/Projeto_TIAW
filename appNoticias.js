@@ -1,4 +1,4 @@
-const API_KEY = '9904f8c49e6942388a8670127c765b1c';
+const API_KEY = '061d4dda20f54f0d901f42d44b26a8ec';
 
 function exibeNoticias () {
     let divNoticias = document.getElementById('api-news');
@@ -12,7 +12,7 @@ function exibeNoticias () {
         //Concatenar o código do Card com os dados do JSON
         texto += `<div class="col-12 col-sm-6 col-lg-4 col-xl-3  d-flex align-items-stretch justify-content-center mb-4">
                     <div class="card card-principal shadow" style="width: 18rem;">
-                        <img src="${noticias.urlToImage}" class="card-img-top" alt="">
+                        <img src="${noticias.image}" class="card-img-top" alt="">
                         <div class="card-body d-flex flex-column justify-content-between">
                         <h5 class="card-title">${noticias.title}</h5>
                         <a href="${noticias.url}" class="btn btn-primary botao">Ler Mais</a>
@@ -27,11 +27,11 @@ function exibeNoticias () {
 }
 
 function executaPesquisaReciclagem (){
-    let query = 'reciclagem';
+    let query = 'Reciclagem';
 
     let xhr = new XMLHttpRequest ();
     xhr.onload = exibeNoticias;
-    xhr.open ('GET',`https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`);
+    xhr.open ('GET',`https://gnews.io/api/v4/search?q=${query}&token=${API_KEY}`);
     xhr.send ();
 }
 
