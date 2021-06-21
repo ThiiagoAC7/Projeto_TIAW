@@ -25,8 +25,10 @@
                     <a class="flex-sm-fill text-sm-center nav-link active" href="noticias.html">Noticias</a>
                     <a class="flex-sm-fill text-sm-center nav-link" href="reciclagem.html">Reciclagem</a>
                     <a class="flex-sm-fill text-sm-center nav-link" href="maps.html">Onde Reciclar</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" id="btn_login" href="login.html"><img class="icon" src="img/login.png" alt="login"></a>
-                    <a class="flex-sm-fill text-sm-center nav-link" id="btn_logout" href="index.html" style="display: none;"></a>
+                    <a class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#loginModal"
+                        id="btn_login"><img class="icon" src="img/login.png" alt="login"></a>
+                    <a class="flex-sm-fill text-sm-center nav-link" id="btn_logout" href="index.html"
+                        style="display: none; justify-content: center;"></a>
                 </nav>
             </div>
         </div>
@@ -38,6 +40,85 @@
             <div id="api-news-reciclagem" class="row bloco"></div>
             <div id="api-news-coleta" class="row bloco"></div>
         </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Entrar</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                                <div class="form-group">
+                                    <label for="username" class="text-info login-cadastro">Usuário</label><br>
+                                    <input type="text" name="username" id="username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info login-cadastro">Senha</label><br>
+                                    <input type="password" name="password" id="password" class="form-control">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-info botao" data-toggle="modal"
+                                        data-target="#cadastroModal">Cadastrar-se</button>
+                                    <input type="submit" name="submit" class="btn btn-info btn-md botao" value="Entrar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cadastroModalLabel">Cadastrar-se</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                                <div class="form-group">
+                                    <label for="login" class="text-info login-cadastro">Usuário</label><br>
+                                    <input type="text" name="txt_login" id="txt_login" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nome" class="text-info login-cadastro">Nome completo</label><br>
+                                    <input type="text" name="txt_nome" id="txt_nome" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="text-info login-cadastro">Email</label><br>
+                                    <input type="text" name="txt_email" id="txt_email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="senha" class="text-info login-cadastro">Senha</label><br>
+                                    <input type="password" name="txt_senha" id="txt_senha" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="senha2" class="text-info login-cadastro">Confirmação de Senha</label><br>
+                                    <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary botao" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="btn_salvar" class="btn btn-info botao">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="container footer">
@@ -61,6 +142,58 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="appNoticias.js"></script>
+    <script>
+
+        // Declara uma função para processar o formulário de login
+        function processaFormLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados de login e senha a partir do formulário de login
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+            resultadoLogin = loginUser(username, password);
+            if (resultadoLogin) {
+                window.location.href = 'index.html';
+            }
+            else { // Se login falhou, avisa ao usuário
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        function salvaLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados do formulário
+            let login = document.getElementById('txt_login').value;
+            let nome = document.getElementById('txt_nome').value;
+            let email = document.getElementById('txt_email').value;
+            let senha = document.getElementById('txt_senha').value;
+            let senha2 = document.getElementById('txt_senha2').value;
+            if (senha != senha2) {
+                alert('As senhas informadas não conferem.');
+                return
+            }
+
+            // Adiciona o usuário no banco de dados
+            addUser(nome, login, senha, email);
+            alert('Usuário salvo com sucesso. Proceda com o login para ');
+
+            // Oculta a div modal do login
+            //document.getElementById ('loginModal').style.display = 'none';
+            $('#loginModal').modal('hide');
+        }
+
+        // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+        document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+
+
+        // Associar salvamento ao botao
+        document.getElementById('btn_salvar').addEventListener('click', salvaLogin);
+    </script>
 </body>
 
 </html>

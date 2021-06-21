@@ -1,4 +1,4 @@
-const API_KEY = '061d4dda20f54f0d901f42d44b26a8ec';
+//const API_KEY = '061d4dda20f54f0d901f42d44b26a8ec';
 
 function exibeNoticiasReciclagem () {
     let divNoticias = document.getElementById('api-news-reciclagem');

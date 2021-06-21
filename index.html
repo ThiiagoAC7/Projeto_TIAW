@@ -114,10 +114,7 @@
             </div>
 
         </section>
-
-        --
-        
-
+   
         <!-- Modal -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
             aria-hidden="true">
@@ -133,17 +130,17 @@
                         <div id="login-box" class="col-md-12">
                             <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
                                 <div class="form-group">
-                                    <label for="username" class="text-info">Usuário</label><br>
+                                    <label for="username" class="text-info login-cadastro">Usuário</label><br>
                                     <input type="text" name="username" id="username" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password" class="text-info">Senha</label><br>
+                                    <label for="password" class="text-info login-cadastro">Senha</label><br>
                                     <input type="password" name="password" id="password" class="form-control">
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-info" data-toggle="modal"
+                                    <button type="button" class="btn btn-info botao" data-toggle="modal"
                                         data-target="#cadastroModal">Cadastrar-se</button>
-                                    <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
+                                    <input type="submit" name="submit" class="btn btn-info btn-md botao" value="Entrar">
                                 </div>
                             </form>
                         </div>
@@ -167,31 +164,31 @@
                         <div id="login-box" class="col-md-12">
                             <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
                                 <div class="form-group">
-                                    <label for="login" class="text-info">Usuário</label><br>
+                                    <label for="login" class="text-info login-cadastro">Usuário</label><br>
                                     <input type="text" name="txt_login" id="txt_login" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="nome" class="text-info">Nome completo</label><br>
+                                    <label for="nome" class="text-info login-cadastro">Nome completo</label><br>
                                     <input type="text" name="txt_nome" id="txt_nome" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email" class="text-info">email</label><br>
+                                    <label for="email" class="text-info login-cadastro">Email</label><br>
                                     <input type="text" name="txt_email" id="txt_email" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="senha" class="text-info">Senha</label><br>
+                                    <label for="senha" class="text-info login-cadastro">Senha</label><br>
                                     <input type="password" name="txt_senha" id="txt_senha" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="senha2" class="text-info">Confirmação de Senha</label><br>
+                                    <label for="senha2" class="text-info login-cadastro">Confirmação de Senha</label><br>
                                     <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="button" id="btn_salvar" class="btn btn-info">Salvar</button>
+                        <button type="button" class="btn btn-secondary botao" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="btn_salvar" class="btn btn-info botao">Salvar</button>
                     </div>
                 </div>
             </div>

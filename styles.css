@@ -42,8 +42,9 @@ h3{
 }
 
 .header_area a:hover{
-    color: white;
-    background-color: #51d16d;
+    color: #0EAD30;
+    background-color: rgb(255, 255, 255, 0.0);
+    border-color: rgb(255, 255, 255, 0.0);
 }
 
 #btn_logout:hover, #btn_login:hover{
@@ -114,7 +115,7 @@ h3{
     border-color: white;
 }
 
-.botao:hover{
+.botao:hover, .botao:focus{
     background-color: #0EAD30;
     border-color: white;
 }
@@ -174,6 +175,10 @@ h3{
 .footer_area{
     padding: 20px;
     text-align: center;
+}
+
+.modal, .login-cadastro{
+    color: #0EAD30 !important;
 }
 
 @media screen and (max-width: 768px) {
