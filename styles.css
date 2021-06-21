@@ -121,35 +121,39 @@ h3{
 }
 
 #reciclagem .verde{
-    border-color: green;
+    border-color: white;
 }
 
 #reciclagem .verde .botao{
-    background-color: green;
+    background-color: #008000;
 }
 
 #reciclagem .amarelo{
-    border-color: rgb(255, 179, 0);
+    border-color: white;
 }
 
 #reciclagem .amarelo .botao{
-    background-color: rgb(255, 179, 0);
+    background-color: #ffb300;
 }
 
 #reciclagem .azul{
-    border-color: blue;
+    border-color: white;
 }
 
 #reciclagem .azul .botao{
-    background-color: blue;
+    background-color: #0000ff;
 }
 
 #reciclagem .vermelho{
-    border-color: red;
+    border-color: white;
 }
 
 #reciclagem .vermelho .botao{
-    background-color: red;
+    background-color: #ff0000;
+}
+
+.material{
+    padding: 30px;
 }
 
 .logo-empresa{
