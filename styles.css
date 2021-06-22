@@ -113,6 +113,7 @@ h3{
 .botao{
     background-color: #08611B;
     border-color: white;
+    transition: background-color 0.5s;
 }
 
 .botao:hover, .botao:focus{
