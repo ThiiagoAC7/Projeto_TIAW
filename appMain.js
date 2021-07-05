@@ -1,5 +1,5 @@
-//const API_KEY = '061d4dda20f54f0d901f42d44b26a8ec';
-const API_KEY = 'dc487279af6359e6e4c1ee68c33b4426';
+const API_KEY = '061d4dda20f54f0d901f42d44b26a8ec';
+//const API_KEY = 'dc487279af6359e6e4c1ee68c33b4426';
 
 function exibeNoticias () {
     let divNoticias = document.getElementById('api-news');
